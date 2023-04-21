@@ -5,7 +5,7 @@ const exchangeInfo = document.getElementById("converted-result");
 
 // Fetch list of available currencies
 function fetchCurrencies() {
-    return fetch('http://api.nbp.pl/api/exchangerates/tables/a/')
+    return fetch('https://api.nbp.pl/api/exchangerates/tables/a/')
     .then(response => response.json())
     .then(data => {
         if (!data || !data.rates || data.rates.length === 0){
